@@ -1,6 +1,6 @@
 ﻿using HotChocolate.Execution.Configuration;
+using MyBookShelf.API.GraphQL.Modules;
 using MyBookShelf.GraphQLSchema.Queries;
-using MyBookShelf.GraphQLSchema.Types;
 
 namespace MyBookShelf.API.GraphQL;
 
@@ -43,11 +43,8 @@ public static class SchemaSetup
     {
         return services
             .AddGraphQLServer()
-            .AddQueryType()                  // root Query
-            .AddTypeExtension<BookQueries>() // estensioni modulari
-            //.AddMutationType()               // root Mutation
-            //.AddTypeExtension<BookMutations>()
-            .AddType<BookType>()
-            .AddType<AuthorType>();
+            .AddQueryType()
+            //.AddMutationType()
+            .AddBookModule(); // estensioni modulari: importa tutto il modulo “Books”
     }
 }
