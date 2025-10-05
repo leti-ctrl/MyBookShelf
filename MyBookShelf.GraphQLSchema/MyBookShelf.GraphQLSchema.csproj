@@ -15,4 +15,8 @@
       <ProjectReference Include="..\MyBookShelf.Domain\MyBookShelf.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Mutation\" />
+    </ItemGroup>
+
 </Project>
