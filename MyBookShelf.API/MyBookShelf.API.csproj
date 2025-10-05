@@ -20,4 +20,9 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\MyBookShelf.Domain\MyBookShelf.Domain.csproj" />
+      <ProjectReference Include="..\MyBookShelf.GraphQLSchema\MyBookShelf.GraphQLSchema.csproj" />
+    </ItemGroup>
+
 </Project>

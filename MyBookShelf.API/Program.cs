@@ -1,6 +1,9 @@
+using MyBookShelf.API.GraphQL;
+
 var builder = WebApplication.CreateBuilder(args);
 
-builder.AddGraphQL().AddTypes();
+builder.Services.AddBookShelfGraphQL();
+
 
 var app = builder.Build();
 
